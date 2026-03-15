@@ -2,7 +2,7 @@ server:
   bind:
     host: 0.0.0.0
     port: 80
-  url: http://localhost:8080
+  url: ${PYGEOAPI_SERVER_URL}
   mimetype: application/json; charset=UTF-8
   encoding: utf-8
   languages:
@@ -29,18 +29,18 @@ metadata:
       name: Apache License Version 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0
     terms_of_service: https://creativecommons.org/licenses/by/4.0/
-    url: http://localhost:8080
+    url: ${PYGEOAPI_SERVER_URL}
   license:
     name: Apache License Version 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
   provider:
     name: My Organization
-    url: http://localhost:8080
+    url: ${PYGEOAPI_SERVER_URL}
   contact:
     name: Your Name
     position: Developer
     email: your@email.com
-    url: http://localhost:8080
+    url: ${PYGEOAPI_SERVER_URL}
 
 resources:
   hello-world:
