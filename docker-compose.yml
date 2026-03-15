@@ -1,0 +1,10 @@
+services:
+  pygeoapi:
+    image: geopython/pygeoapi:latest
+    volumes:
+      - ./my.config.yml:/pygeoapi/local.config.yml
+      - ./my_processes:/pygeoapi/my_processes
+    ports:
+      - "8080:80"
+    environment:
+      - PYTHONPATH=/pygeoapi

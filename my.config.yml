@@ -1,0 +1,54 @@
+server:
+  bind:
+    host: 0.0.0.0
+    port: 80
+  url: http://localhost:8080
+  mimetype: application/json; charset=UTF-8
+  encoding: utf-8
+  languages:
+    - en-US
+  manager:
+    name: TinyDB
+    connection: /tmp/pygeoapi-process-manager.db
+    output_dir: /tmp/
+
+logging:
+  level: ERROR
+
+metadata:
+  identification:
+    title:
+      en: My OGC API
+    description:
+      en: OGC API Processes demo
+    language: en-US
+    keywords:
+      en:
+        - geospatial
+    license:
+      name: Apache License Version 2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0
+    terms_of_service: https://creativecommons.org/licenses/by/4.0/
+    url: http://localhost:8080
+  license:
+    name: Apache License Version 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  provider:
+    name: My Organization
+    url: http://localhost:8080
+  contact:
+    name: Your Name
+    position: Developer
+    email: your@email.com
+    url: http://localhost:8080
+
+resources:
+  hello-world:
+    type: process
+    processor:
+      name: HelloWorld
+
+  buffer:
+    type: process
+    processor:
+      name: my_processes.buffer_process.BufferProcessor
